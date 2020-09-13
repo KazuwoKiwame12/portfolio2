@@ -1,5 +1,6 @@
 # portfolio2
-
+## 本番環境
+url: https://blissful-allen-ee0182.netlify.app/
 ## Build Setup
 
 ```bash
