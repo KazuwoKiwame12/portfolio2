@@ -1,0 +1,29 @@
+{
+  "cardInfos": [
+    {
+      "image": "task.png",
+      "title": "task management",
+      "description": "I have often done the team work, and I have often do manage the tasks what we needed with Github issues."
+    },
+    {
+      "image": "time.png",
+      "title": "time management",
+      "description": "I have often done the team work, and I have often do manage the time and schedule what with Trello and Github."
+    },
+    {
+      "image": "team.png",
+      "title": "team management",
+      "description": "I love to work with someone even if I haven’t ever met. \nI try to be smile in the work.\nI can coordinate the purpose of the my team."
+    },
+    {
+      "image": "code.png",
+      "title": "code",
+      "description": "I love to write the code.\nRecentlly, I try to wite the good code for reading because of ‘Readable Code’."
+    },
+    {
+      "image": "design.png",
+      "title": "design",
+      "description": "Design is the most important element in the app and services.\nI can make the 3D Models with blender"
+    }
+  ]
+}
