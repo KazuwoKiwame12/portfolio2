@@ -35,6 +35,10 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    {
+      src: '~/plugins/vue-scrollmagic.js',
+      ssr: false
+    }
   ],
   /*
   ** Auto import components
