@@ -1,42 +1,45 @@
 <template>
-  <div id="work-trigger" class="p-hero">
+  <div class="p-hero"
+       :style="{height: height+'px'}">
     <div class="p-sidebar">
       <div class="p-title">
         <h1>Portfolio</h1>
       </div>
-      <div id="work-content" style="opacity: 0; transform: translateX(-100%)">
-        <div class="p-name">
-          <h2>KazuwoKiwam12</h2>
-        </div>
-        <ul class="p-feature">
-          <li>SoftwareEngineer</li>
-          <li>Have a big dream</li>
-        </ul>
-        <div class="design-bar"></div>
+      <div class="p-name">
+        <h2>KazuwoKiwame12</h2>
       </div>
+      <ul class="p-feature">
+        <li>SoftwareEngineer</li>
+        <li>Hav A Big Dream</li>
+      </ul>
+      <div class="design-bar"></div>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    mounted() {
-      const scene1 = this.$scrollmagic
-        .scene({
-          triggerElement: '#work-trigger',
-          triggerHook: 0,
-          duration: 400,
-          reverse: false
-        })
-        .setTween('#work-content', {
-          css: {
-            opacity: '1',
-            transform: 'translateX(0)'
-          }
-        })
-
-      this.$scrollmagic.addScene(scene1)
-    }
+    data: function () {
+      return {
+        height: 750
+      }
+    },
+    methods: {
+      handleResize: function() {
+          this.height = window.innerHeight;
+      }
+    },
+    created() {
+      if (process.client) {
+        window.addEventListener('resize', this.handleResize)
+        this.handleResize()
+      }
+    },
+    destroyed () {
+      if (process.client) {
+        window.removeEventListener('resize', this.handleResize)
+      }
+    },
   }
 </script>
 
@@ -79,6 +82,7 @@
     position: relative;
     top: 200px;
     left: 30%;
+    width: 35vw;
   }
 
   .design-bar {
